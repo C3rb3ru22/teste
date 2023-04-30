@@ -115,9 +115,15 @@ function verificaColisaoRaquete(x, y, ladoDireito) {
 }
 
 function movimentaRaqueteOponente(){
-  velocidadeYOponente = yBolinha - yRaqueteOponente - raqueteComprimento / 2 - 30;
-  yRaqueteOponente += velocidadeYOponente + chanceErro
-  calculaChanceErro()
+  // velocidadeYOponente = yBolinha - yRaqueteOponente - raqueteComprimento / 2 - 30;
+  // yRaqueteOponente += velocidadeYOponente + chanceErro
+  // calculaChanceErro()
+  const yMeioOponente = yRaqueteOponente + raqueteComprimento / 2;
+  if (yBolinha > yMeioOponente) {
+    yRaqueteOponente += VELOCIDADE;
+  } else if (yBolinha < yMeioOponente) {
+    yRaqueteOponente -= VELOCIDADE;
+  }
 }
 
 function calculaChanceErro() {
