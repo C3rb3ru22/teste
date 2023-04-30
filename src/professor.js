@@ -65,8 +65,8 @@ function mostraBolinha(){
 }
 
 function movimentaBolinha(){
-  xBolinha += velocidadeXBolinha;
-  yBolinha += velocidadeYBolinha;
+  // xBolinha += velocidadeXBolinha;
+  // yBolinha += velocidadeYBolinha;
 }
 
 function verificaColisaoBorda(){
